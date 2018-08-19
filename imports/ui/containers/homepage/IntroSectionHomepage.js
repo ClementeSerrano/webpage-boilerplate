@@ -36,7 +36,9 @@ class IntroSectionHomepage extends Component {
                     <ScrollButton
                       linkto="#aboutUs"
                       content="Get in touch!"
-                      color="#39bda7"
+                      backgroundcolor="Transparent"
+                      color="#fff"
+                      hovercolor="#39bda7"
                     />
                   </Fade>
                 </Col>

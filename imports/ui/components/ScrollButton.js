@@ -6,7 +6,12 @@ class ScrollButton extends Component {
   render() {
     return (
       <div>
-        <ButtonStyle href={this.props.linkto} color={this.props.color}>
+        <ButtonStyle
+          href={this.props.linkto}
+          backgroundcolor={this.props.backgroundcolor}
+          color={this.props.color}
+          hovercolor={this.props.hovercolor}
+        >
           {this.props.content}
         </ButtonStyle>
       </div>
@@ -32,8 +37,8 @@ const ButtonStyle = styled(AnchorLink)`
   transition: all 0.2s ease-in;
   position: relative;
   overflow: hidden;
-  background-color: Transparent;
-  color: #fff;
+  background-color: ${props => props.backgroundcolor};
+  color: ${props => props.color};
   font-size: 15px;
   font-family: "Libre Franklin", sans-serif;
   &:before {
@@ -58,7 +63,7 @@ const ButtonStyle = styled(AnchorLink)`
     top: 180%;
     width: 160%;
     height: 190%;
-    background-color: ${props => props.color};
+    background-color: ${props => props.hovercolor};
     border-radius: 50%;
     display: block;
     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
@@ -66,16 +71,16 @@ const ButtonStyle = styled(AnchorLink)`
   }
   &:hover {
     color: #ffffff;
-    border: 1px solid ${props => props.color};
+    border: 1px solid ${props => props.hovercolor};
     z-index: 1;
     &:before {
       top: -35%;
-      background-color: ${props => props.color};
+      background-color: ${props => props.hovercolor};
       transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
     }
     &:after {
       top: -45%;
-      background-color: ${props => props.color};
+      background-color: ${props => props.hovercolor};
       transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
     }
   }

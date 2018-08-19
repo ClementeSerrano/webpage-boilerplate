@@ -21,7 +21,7 @@ const Navebar = () => (
           <SuperAnchor href="#aboutUs"> About us </SuperAnchor>
         </NavItem>
         <NavItem>
-          <SuperAnchor href="#services"> Section 2 </SuperAnchor>
+          <SuperAnchor href="#services"> Features </SuperAnchor>
         </NavItem>
 
         <NavItem eventKey={4}>

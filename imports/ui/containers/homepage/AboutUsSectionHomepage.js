@@ -7,22 +7,16 @@ class AboutUsSectionHomepage extends Component {
   render() {
     return (
       <section id="aboutUs">
-        <SuperContainer>
+        <SuperContainer backgroundcolor={this.props.backgroundcolor}>
           <Grid>
             <Fade left>
-              <SuperHr />
               <Row>
-                <Col lg={8}>
-                  <Paragraph>
-                    Nuestra misión es apoyarte en tus proyectos mediante
-                    soluciones eléctricas, de seguridad y de arquitectura para
-                    los sectores domiciliarios, comercial e industrial.
+                <Col lg={6} lgOffset={3}>
+                  <Title titlecolor={this.props.titlecolor}>About us</Title>
+                  <SuperHr hrcolor={this.props.hrcolor} />
+                  <Paragraph paragraphcolor={this.props.paragraphcolor}>
+                    {this.props.text}
                   </Paragraph>
-                  <Paragraph2>
-                    Escuchamos tus necesidades, nos comprometemos con ellas y
-                    trabajamos bajo los mas altos estándares de calidad y
-                    seguridad para entregarte la solución que tú necesitas.
-                  </Paragraph2>
                 </Col>
               </Row>
             </Fade>
@@ -40,16 +34,16 @@ const SuperContainer = styled.section`
   padding-bottom: 50px;
   padding: 150px 0;
   position: relative;
-  text-align: left;
-  background-color: #161e24;
+  text-align: center;
+  background-color: ${props => props.backgroundcolor};
 `;
 
-const Paragraph = styled.p`
+const Title = styled.p`
   font-family: "Libre Franklin", sans-serif;
-  font-size: 25px;
-  font-weight: 100;
-  font-style: italic;
-  color: #cccccc;
+  font-size: 50px;
+  font-weight: 700;
+  color: ${props => props.titlecolor};
+  margin-bottom: 30px;
   @media screen and (max-width: 850px) {
     font-size: 40px;
   }
@@ -58,11 +52,12 @@ const Paragraph = styled.p`
   }
 `;
 
-const Paragraph2 = styled.p`
+const Paragraph = styled.p`
   font-family: "Libre Franklin", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  color: #cccccc;
+  font-size: 25px;
+  font-weight: 100;
+  line-height: 1.6;
+  color: ${props => props.paragraphcolor};
   @media screen and (max-width: 850px) {
     font-size: 40px;
   }
@@ -72,8 +67,10 @@ const Paragraph2 = styled.p`
 `;
 
 const SuperHr = styled.hr`
-  margin-left: 0;
-  margin-top: 30px;
+  text-align: center;
+  margin-top: 20px;
+  border-width: 3px;
+  border-color: ${props => props.hrcolor};
   margin-bottom: 30px;
   max-width: 100px;
 `;
