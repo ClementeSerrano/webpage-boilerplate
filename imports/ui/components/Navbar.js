@@ -1,46 +1,52 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
-import YourWebsiteLogo from "../assets/your-website-logo_white";
 
-const Navebar = () => (
-  <SuperNavBar collapseOnSelect fixedTop>
-    <Navbar.Header>
-      <Navbar.Brand>
-        <Logo src={YourWebsiteLogo} />
-      </Navbar.Brand>
-      <Navbar.Toggle />
-    </Navbar.Header>
-    <Navbar.Collapse>
-      <Nav pullRight>
-        <NavItem>
-          <SuperAnchor href="#intro">Home</SuperAnchor>
-        </NavItem>
-        <NavItem>
-          <SuperAnchor href="#aboutUs"> About us </SuperAnchor>
-        </NavItem>
-        <NavItem>
-          <SuperAnchor href="#services"> Features </SuperAnchor>
-        </NavItem>
+class Navebar extends Component {
+  render() {
+    return (
+      <SuperNavBar
+        collapseOnSelect
+        fixedTop
+        backgroundcolor={this.props.backgroundcolor}
+      >
+        <Navbar.Header>
+          <Navbar.Brand>
+            <Logo src={this.props.logo} />
+          </Navbar.Brand>
+          <Navbar.Toggle />
+        </Navbar.Header>
+        <Navbar.Collapse>
+          <Nav pullRight>
+            <NavItem>
+              <SuperAnchor href="#intro">Home</SuperAnchor>
+            </NavItem>
+            <NavItem>
+              <SuperAnchor href="#aboutUs"> About us </SuperAnchor>
+            </NavItem>
+            <NavItem>
+              <SuperAnchor href="#services"> Features </SuperAnchor>
+            </NavItem>
 
-        <NavItem eventKey={4}>
-          <SuperAnchor href="#contactForm">Contact</SuperAnchor>
-        </NavItem>
-      </Nav>
-    </Navbar.Collapse>
-  </SuperNavBar>
-);
+            <NavItem eventKey={4}>
+              <SuperAnchor href="#contactForm">Contact</SuperAnchor>
+            </NavItem>
+          </Nav>
+        </Navbar.Collapse>
+      </SuperNavBar>
+    );
+  }
+}
 
 export default Navebar;
 
 const SuperNavBar = styled(Navbar)`
   border-color: rgba(34, 34, 34, 0.05);
-  background-color: black;
+  background-color: ${props => props.backgroundcolor};
   opacity: 0.7;
   font-family: "Helvetica", "Arial", "sans-serif";
-  font-weight: 100;
-  letter-spacing: 2px;
+  font-weight: 200;
   font-size: 15px;
 `;
 const Logo = styled.img`

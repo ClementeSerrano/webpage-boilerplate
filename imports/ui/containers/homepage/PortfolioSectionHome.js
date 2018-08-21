@@ -1,53 +1,30 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import { Grid, Row, Col } from "react-bootstrap";
-
+import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
-class FeaturesSectionHomePage extends Component {
+import Card from "../../components/Card";
+
+class PortfolioSectionHome extends Component {
   render() {
     return (
       <SuperContainer backgroundcolor={this.props.backgroundcolor}>
         <Grid>
           <Row>
             <Col lg={6} lgOffset={3}>
-              <Title titlecolor={this.props.titlecolor}>Features</Title>
+              <Title titlecolor={this.props.titlecolor}>Portfolio</Title>
               <SuperHr hrcolor={this.props.hrcolor} />
             </Col>
           </Row>
           <Row>
             <Col lg={4}>
-              <ImageContainer>
-                <Fade top>{this.props.icon1}</Fade>
-              </ImageContainer>
-              <Title2>
-                <Fade bottom>{this.props.title1}</Fade>
-              </Title2>
-              <Paragraph>
-                <Fade bottom>{this.props.paragraph1}</Fade>
-              </Paragraph>
+              <Card />
             </Col>
             <Col lg={4}>
-              <ImageContainer>
-                <Fade top>{this.props.icon2}</Fade>
-              </ImageContainer>
-              <Title2>
-                <Fade bottom>{this.props.title2}</Fade>
-              </Title2>
-              <Paragraph>
-                <Fade bottom>{this.props.paragraph2}</Fade>
-              </Paragraph>
+              <Card />
             </Col>
             <Col lg={4}>
-              <ImageContainer>
-                <Fade top>{this.props.icon3}</Fade>
-              </ImageContainer>
-              <Title2>
-                <Fade bottom>{this.props.title3}</Fade>
-              </Title2>
-              <Paragraph>
-                <Fade bottom>{this.props.paragraph3}</Fade>
-              </Paragraph>
+              <Card />
             </Col>
           </Row>
         </Grid>
@@ -56,7 +33,7 @@ class FeaturesSectionHomePage extends Component {
   }
 }
 
-export default FeaturesSectionHomePage;
+export default PortfolioSectionHome;
 
 const SuperContainer = styled.section`
   padding-top: 50px;
