@@ -1,6 +1,6 @@
-# Website boilerplate
+# Quasar Project :dizzy:
 
-Cool and fast to deploy website boilerplate to start your own website. It includes a navbar, front section, different types of content sections, a contact form and a footer.
+Cool and fast to deploy website CMS to start your own website.
 
 The contact form is adapted to use using Sendgrid's SMTP services and the production deployment adapted to App Engine of Google Cloud Platform.
 
