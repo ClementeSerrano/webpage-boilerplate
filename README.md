@@ -1,6 +1,6 @@
-# Quasar Project :dizzy:
+# Website boilerplate
 
-Cool and fast to deploy website CMS to start your own website.
+Cool and fast to deploy website boilerplate to start your own website.
 
 The contact form is adapted to use using Sendgrid's SMTP services and the production deployment adapted to App Engine of Google Cloud Platform.
 
